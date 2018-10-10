@@ -9,11 +9,16 @@ Or, one can use the python file: fgosummon_simu_module.py. The class **pool** se
 
 ## Database structure:
 - Every row has the servants database as below:
+
   |ID|Rarity|Name| Class ID | Limit |
   |--|--|--|--|--|
+  
   Where the Rarity follow the mapping:
-  $$i \rightarrow \star \ \text{i} $$
+  
+  i -> star-i
+  
   And the Class ID follow the mapping:
+  
   |1|2|3|4|5|6|7|8|9|
   |-|-|-|-|-|-|-|-|-|
   |Saber|Archer|Lancer|Rider|Caster|Assasin|Berserker|Shield|Ruler|
