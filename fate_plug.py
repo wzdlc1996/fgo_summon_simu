@@ -21,7 +21,7 @@ def onQQMessage(bot, contact, member, content):
     print('Hello')
     if '/callBot' in content:
         if '-version' in content :
-            bot.SendTo(contact, 'This is Spirit Summon System. Version 0.1.2')
+            bot.SendTo(contact, 'This is Spirit Summon System. Version 0.2.0')
         if '-help' in content :
             bot.SendTo(contact, glVars.helpDoc)
         if '-dice' in content :

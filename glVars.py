@@ -5,7 +5,16 @@ helpDoc = ("Following functions have been realized: \n"
            "\'/callBot -version\' : show the version number \n"
            "\'/callBot -help\' : show the basic help doc \n"
            "\'/callBot -dice n\' : cast a n-faced dice \n"
-           "\'/callBot -summon\' : Get a 10-summon")
+           "\'/callBot -summon\' : Get a 10-summon \n"
+           "\'/callBot -cbasummon\' : Get a 10-summon in CBA pool \n"
+           "\'/callBot -FDusummon\' : Get a anniversary 2019 in 3-knight pool \n"
+           "\'/callBot -FDdsummon\' : Get a anniversary 2019 in 4-knight pool \n"
+           "\'/callBot -query--tot\' : Get total result statistics \n"
+           "\'/callBot -query--all\' : Get all member result statistics \n"
+           "\'/callBot -query--self\' : Get member-self result statistics \n"
+           "\'/callBot -query--lucky\' : Get the luckiest one \n"
+           "\'/callBot -query--craft\' : Get the detail of up-craft \n"
+           )
 
 
 s5Rate = 70
