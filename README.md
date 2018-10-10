@@ -21,7 +21,9 @@ Or, one can use the python file: fgosummon_simu_module.py. The class **pool** se
   |10|11|12|13|14|15|16|17|18|
   |-|-|-|-|-|-|-|-|-|
   |Avenger|Mooncancer|AlterEgo|Foreigner|Beast|||||
+  
   And the Limit follow the mapping:
+  
   |Number|Limit Type|
   |-|-|
   |0|Unsummonable|
@@ -32,6 +34,7 @@ Or, one can use the python file: fgosummon_simu_module.py. The class **pool** se
 
 - Craft index has the meaning as:
   Where in Mooncell, it is named as "type_marker" in csv file.  
+  
   |Number|Limit Type|
   |-|-|
   |2|From DaVince shop|
@@ -43,5 +46,6 @@ Or, one can use the python file: fgosummon_simu_module.py. The class **pool** se
   |128 and 129|free to Get in Event|
   |256 and 257|Get from pool|
   |512|Story pool only|
+  
   Where \(2^n+1\) type is effective in event.
   In my file, it is 1 for any pool and 2 for pick up one.
