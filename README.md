@@ -20,7 +20,7 @@ Or, one can use the python file: fgosummon_simu_module.py. The class **pool** se
 
   |10|11|12|13|14|15|16|17|18|
   |-|-|-|-|-|-|-|-|-|
-  |Avenger|Mooncancer|AlterEgo|Foreigner|Beast|
+  |Avenger|Mooncancer|AlterEgo|Foreigner|Beast|||||
   And the Limit follow the mapping:
   |Number|Limit Type|
   |-|-|
