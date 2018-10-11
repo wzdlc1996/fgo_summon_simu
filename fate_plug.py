@@ -12,8 +12,28 @@ def fate_game():
 def getRandDice(number):
     return math.floor(random.random()*number)+1
 
-def getNumberSeriesFromString(string):
-    return int(''.join(list(map(str,re.findall(r"\d",string)))))
+def getDiceResult(string):
+    findlis = re.findall(r"\d+",string);
+    if len(findlis) == 1:
+        return "the result is: "+str(getRandDice(int(findlis[0])))
+    elif len(findlis) == 2:
+        dicenumber = int(findlis[0])
+        dicetype = int(findlis[1])
+        resnumber = list(range(dicenumber))
+        for i in range(dicenumber):
+            resnumber[i] = getRandDice(dicetype)
+        res = sum(resnumber)
+        return "the result is ["+','.join([str(x) for x in resnumber])+"]\nfinal is: "+str(res)
+    elif len(findlis) ==3:
+        dicenumber = int(findlis[0])
+        dicetype = int(findlis[1])
+        offset = int(findlis[2])
+        resnumber = list(range(dicenumber))
+        for i in range(dicenumber):
+            resnumber[i] = getRandDice(dicetype)
+        res = sum(resnumber)+offset
+        return "the result is ["+','.join([str(x) for x in resnumber])+"]\nfinal is: "+str(res)        
+    return "incorrect input"
 
 
 
@@ -25,7 +45,7 @@ def onQQMessage(bot, contact, member, content):
         if '-help' in content :
             bot.SendTo(contact, glVars.helpDoc)
         if '-dice' in content :
-            bot.SendTo(contact, '@'+member.name+' '+str(getRandDice(getNumberSeriesFromString(content))))
+            bot.SendTo(contact, '@'+member.name+'\n'+getDiceResult(content))
         if '-summon' in content :
             getRes = glVars.pool.getTen()
             glVars.stat.addSumRes(member.name, getRes)
