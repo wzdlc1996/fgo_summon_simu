@@ -69,3 +69,5 @@ def onQQMessage(bot, contact, member, content):
             bot.SendTo(contact, '@'+member.name+glVars.stat.perfRateByName(member.name))
         if '-query--lucky' in content:
             bot.SendTo(contact, 'The luckiest one is: \n '+glVars.stat.perfLuckiest(1))
+        if '-query--badluck' in content:
+            bot.SendTo(contact, 'The luckiest one is: \n '+glVars.stat.perfLuckiest(1))

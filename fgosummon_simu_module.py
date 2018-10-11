@@ -79,7 +79,7 @@ class pool:
     sv3ulen = 0
     
     def __init__(self,sv5=0,sv5pu=0,sv4=0,sv4pu=0,sv3=0,sv3pu=0,cft=0,cftup=0):
-        with open('/home/leonard/Documents/python/qqbot_plugins/database.db','r') as dataFile:
+        with open('/home/leonard/Documents/python/qqbot_plugins/fgo_summon_simu/database.db','r') as dataFile:
             allSvt = list(map(lambda x: x.split(),dataFile.readlines()))
             if sv5==0:
                 self.svt5 = selStar(allSvt,'5')
@@ -106,7 +106,7 @@ class pool:
                 self.svt3up = selLis(allSvt,sv3pu)
             self.sv3ulen = len(self.svt3up)
             self.svtList = self.svt5 + self.svt4 + self.svt3
-        with open('/home/leonard/Documents/python/qqbot_plugins/craftdatabase.db','r') as dataFile:
+        with open('/home/leonard/Documents/python/qqbot_plugins/fgo_summon_simu/craftdatabase.db','r') as dataFile:
             allCft = list(map(lambda x: x.split(),dataFile.readlines()))
             if cft ==0:
                 self.cft = selByType(allCft, '1')
@@ -272,3 +272,7 @@ class summonStat:
         for j in res:
             inistr += j[0] +': \nSummoned '+str(j[1])+' times\n★4 Numbers: '+str(j[2])+'\n★5 Numbers: '+str(j[3])+'\n'
         return inistr
+    
+    def perfBadLuck(self):
+        res = self.qLuckiest(len(self.memDict))[-1]
+        return res[0] +': \nSummoned '+str(res[1])+' times\n★4 Numbers: '+str(res[2])+'\n★5 Numbers: '+str(res[3])+'\n'
